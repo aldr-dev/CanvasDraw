@@ -1,5 +1,5 @@
-import { useEffect, useRef, useState } from 'react';
-import { IncomingData } from './types';
+import {useEffect, useRef, useState} from 'react';
+import {IncomingData} from './types';
 import * as React from 'react';
 import './App.css';
 
@@ -74,6 +74,7 @@ const App = () => {
 
       contextRef.current.strokeStyle = 'black';
       contextRef.current.lineWidth = 1;
+
       drawPixels(offsetX, offsetY);
 
       sendDrawData(offsetX, offsetY);
@@ -88,14 +89,14 @@ const App = () => {
 
   const sendDrawData = (x: number, y: number) => {
     if (ws.current) {
-      const data = { type: 'DRAW_LINE', payload: { x, y } };
+      const data = {type: 'DRAW_LINE', payload: {x, y}};
       ws.current.send(JSON.stringify(data));
     }
   };
 
   return (
     <div>
-      <h1 className="canvas-draw-headline">CanvasDraw &#9998;</h1>
+      <h1 className="canvas-draw-headline">CanvasDraw</h1>
       <canvas
         onMouseMove={draw}
         onMouseDown={startDrawing}

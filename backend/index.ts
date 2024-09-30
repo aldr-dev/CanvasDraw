@@ -39,7 +39,7 @@ router.ws('/draw', (ws, _) => {
           }));
         });
       } else {
-        ws.send(JSON.stringify({ error: 'Invalid draw data' }));
+        ws.send(JSON.stringify({error: 'Invalid draw data'}));
       }
     } catch (error) {
       ws.send(JSON.stringify({error: 'Invalid Data Format'}));
