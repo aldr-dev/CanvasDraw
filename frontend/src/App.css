@@ -5,6 +5,7 @@
 }
 
 body {
+  font-family: Arial, sans-serif;
   margin: 0;
 }
 
@@ -12,4 +13,19 @@ body {
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 15px;
+}
+
+.canvas-draw-headline {
+  font-weight: 500;
+  font-size: 35px;
+}
+
+.canvas-draw {
+  border: 1px solid #333;
+  border-radius: 10px;
+  background-color: #f7f7f7;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  cursor: crosshair;
+  display: block;
+  margin: 20px auto;
 }
